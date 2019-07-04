@@ -142,11 +142,23 @@ public class AddressBook {
         String ln2 = ml2.substring(ml2.indexOf(SPACE) + 1);
 
         // Here we do a simple string match to get the result.
-        System.out.println("first names match: " + (fn1 == fn2));
-        System.out.println("middle names match: " + (mn1 == mn2));
-        System.out.println("last names match: " + (ln1 == ln2));
+        System.out.println("first names match: " + (fn1.equals(fn2)));
+        System.out.println("middle names match: " + (mn1.equals(mn2)));
+        System.out.println("last names match: " + (ln1.equals(ln2)));
 
     }
+
+    public boolean phoneNumberIsCorrect() {
+
+        for (int i=0; i<cellphone.length(); i++) {
+            char c = cellphone.charAt(i);
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
 
 
