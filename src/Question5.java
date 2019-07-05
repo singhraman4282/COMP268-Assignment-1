@@ -19,54 +19,29 @@ public class Question5 {
 
     public static void main(String[] args) {
 
-//        System.out.println("Showing monthly savings");
-        EmployeeSavings employeeSavings = new EmployeeSavings("r","s");
-//        double[] savings = employeeSavings.generateMonthlySavings();
-//        for (double s : savings ) {
-//            System.out.println(s);
-//        }
-//
-//        System.out.println("Showing accumulated value");
-//        double[] interests = employeeSavings.calculateInterest();
-//        for (double i: interests) {
-//            System.out.println(i);
-//        }
-//
-//        System.out.println("Showing monthly interests");
-//        double[] interestOnly = employeeSavings.getMonthlyInterests();
-//        for (double i: interestOnly) {
-//            System.out.println(i);
-//        }
-//
-//        System.out.println("account value is: " + employeeSavings.getAccountValue());
+        EmployeeSavings employeeSavings = new EmployeeSavings("r", "s");
 
 
+        EmployeeSavings[] es = new EmployeeSavings[]{
+                new EmployeeSavings("Elena", "Brandon"),
+                new EmployeeSavings("Thomas", "Molson"),
+                new EmployeeSavings("Hamilton", "Winn"),
+                new EmployeeSavings("Suzie", "Sarandin"),
+                new EmployeeSavings("Philip", "Winne"),
+                new EmployeeSavings("Alex", "Trebok"),
+                new EmployeeSavings("Emma", "Pivoto"),
+                new EmployeeSavings("John", "Lenthen"),
+                new EmployeeSavings("James", "Lean"),
+                new EmployeeSavings("Jane", "Ostin"),
+                new EmployeeSavings("Emily", "Car"),
+                new EmployeeSavings("Daniel", "Hamshire"),
+                new EmployeeSavings("Neda", "Bazdar"),
+                new EmployeeSavings("Aaron", "Smith"),
+                new EmployeeSavings("Kate", "Hen")};
 
-
-        EmployeeSavings[] es = new EmployeeSavings[] { employeeSavings };
         String report = EmployeeSavings.getReport(es);
         System.out.println(report);
 
 
     }
-
-
 }
-
-/*
-//        double sum = 100;
-//        double previousMonthSum = 0;
-//        double count = 0;
-//        boolean countReached = false;
-//
-//        do {
-//            sum = (PRINCIPLE + previousMonthSum)*(1 + (0.05/12));
-//            System.out.println("previous month:" + previousMonthSum);
-//            System.out.println("sum is: " + sum);
-//            previousMonthSum = sum;
-//            countReached = (count == 2);
-//            count++;
-//
-//        } while (!countReached);
-//        System.out.println(sum);
- */

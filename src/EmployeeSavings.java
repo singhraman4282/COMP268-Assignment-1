@@ -73,6 +73,8 @@ public class EmployeeSavings extends AddressBook {
     public static String getReport(EmployeeSavings[] arr) {
         String report = "";
 
+        report = report + "Saving       Accumulated amount        Total Interest\n";
+        report = report + "=========================================================\n";
         for(EmployeeSavings employeeSavings: arr) {
             double[] savings = employeeSavings.getMonthlySavings();
             double[] interests = employeeSavings.calculateInterest();
@@ -80,6 +82,7 @@ public class EmployeeSavings extends AddressBook {
             for (int i=0;i<12;i++) {
                 report = report + savings[i] + "        " + interests[i] + "        " + interestOnly[i] + "\n";
             }
+            report = report + employeeSavings.getFirstName() + " " + employeeSavings.getLastName() + "\n";
         }
 
         return report;
