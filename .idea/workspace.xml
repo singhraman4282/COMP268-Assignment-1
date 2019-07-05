@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d000b4dc-123b-4327-aeea-f78fecd5510d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pythgorous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pythgorous.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Question7.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +16,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Question6.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="91" column="52" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
+            <state relative-caret-position="364">
+              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Question7.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+                <element signature="e#1809#1810#0" expanded="true" />
+                <element signature="e#1876#1877#0" expanded="true" />
+                <element signature="e#1937#1946#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,27 +58,6 @@
                 <element signature="e#833#834#0" expanded="true" />
                 <element signature="e#879#880#0" expanded="true" />
                 <element signature="e#914#915#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Pythgorous.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#77#78#0" expanded="true" />
-                <element signature="e#142#143#0" expanded="true" />
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/Pythgorous.java" />
         <option value="$PROJECT_DIR$/src/Triangle.java" />
         <option value="$PROJECT_DIR$/src/Question6.java" />
+        <option value="$PROJECT_DIR$/src/Question7.java" />
       </list>
     </option>
   </component>
@@ -156,14 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Question6">
-    <configuration name="Question2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Question2" />
-      <module name="Assignment1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Question7">
     <configuration name="Question3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Question3" />
       <module name="Assignment1" />
@@ -192,13 +177,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Question7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Question7" />
+      <module name="Assignment1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Question7" />
         <item itemvalue="Application.Question6" />
         <item itemvalue="Application.Question5" />
         <item itemvalue="Application.Question4" />
         <item itemvalue="Application.Question3" />
-        <item itemvalue="Application.Question2" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +220,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32378855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32378855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,8 +338,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pythgorous.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
           <folding>
             <element signature="e#77#78#0" expanded="true" />
             <element signature="e#142#143#0" expanded="true" />
@@ -386,8 +378,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Question6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="91" column="52" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
+        <state relative-caret-position="364">
+          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Question7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#1809#1810#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1937#1946#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
