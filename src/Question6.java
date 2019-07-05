@@ -37,7 +37,10 @@ b. a = 84 and c = 91
 
         a = 48;
         c = 75;
-        b = Pythgorous.getB(a,c);
+
+        Triangle t = new Triangle(a,c);
+        b = t.getB();
+
         System.out.println(b);
     }
 
@@ -48,10 +51,18 @@ b. a = 84 and c = 91
 
         a = 84;
         c = 91;
-        b = Pythgorous.getB(a,c);
+
+        Triangle t = new Triangle(a,c);
+        b = t.getB();
+
         System.out.println(b);
     }
 
+    /*
+    II. Determine if the following triangles are right-angled triangles:
+a. a = 45, b = 55, and c = 75
+b. a = 28, b = 45, and c = 53
+     */
     private static void exercise2() {
         exercise2Part1();
         exercise2Part2();
@@ -66,7 +77,9 @@ b. a = 84 and c = 91
         b = 55;
         c = 75;
 
-        boolean isRightAngled = Pythgorous.irRightAngled(a,b,c);
+        Triangle t = new Triangle(a,b,c);
+
+        boolean isRightAngled = t.irRightTriangle();
         System.out.println(isRightAngled);
     }
 
@@ -79,7 +92,9 @@ b. a = 84 and c = 91
         b = 45;
         c = 53;
 
-        boolean isRightAngled = Pythgorous.irRightAngled(a,b,c);
+        Triangle t = new Triangle(a,b,c);
+
+        boolean isRightAngled = t.irRightTriangle();
         System.out.println(isRightAngled);
     }
 

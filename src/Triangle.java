@@ -1,8 +1,8 @@
 public class Triangle {
 
-    double a;
-    double b;
-    double c;
+    private double a;
+    private double b;
+    private double c;
 
     public Triangle(double a, double b, double c) {
         this.a = a;
@@ -10,19 +10,25 @@ public class Triangle {
         this.c = c;
     }
 
-    public  double getA(double b, double c) {
+    public Triangle(double a, double c) {
+        this.a = a;
+        this.b = getB();
+        this.c = c;
+    }
+
+    public  double getA() {
         return getSquareRoot(getSquare(c) - getSquare(b));
     }
 
-    public double getB(double a, double c) {
+    public double getB() {
         return getSquareRoot(getSquare(c) - getSquare(a));
     }
 
-    public double getC(double a, double b) {
+    public double getC() {
         return getSquareRoot(getSquare(b) + getSquare(a));
     }
 
-    public boolean irRightTriangle(double a, double b, double c) {
+    public boolean irRightTriangle() {
         return (getSquare(c) == (getSquare(a) + getSquare(b)));
     }
 
