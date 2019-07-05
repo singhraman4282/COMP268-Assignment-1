@@ -26,13 +26,19 @@ public class Question5 {
             System.out.println(s);
         }
 
-        System.out.println("Showing monthly interests");
-
+        System.out.println("Showing accumulated value");
         double[] interests = employeeSavings.calculateInterest();
         for (double i: interests) {
             System.out.println(i);
         }
 
+        System.out.println("Showing monthly interests");
+        double[] interestOnly = employeeSavings.getMonthlyInterests();
+        for (double i: interestOnly) {
+            System.out.println(i);
+        }
+
+        System.out.println("account value is: " + employeeSavings.getAccountValue());
     }
 
 

@@ -5,6 +5,7 @@ public class EmployeeSavings extends AddressBook {
     private double[] monthlySavings;
     private static final double ANNUAL_INTEREST_RATE = 0.05;
     private static final double MONTHLY_INTEREST_RATE = ANNUAL_INTEREST_RATE/12;
+    private double[] accumulatedValues;
 
     public EmployeeSavings(String firstName, String middleName, String lastName, double[] monthlySavings) {
         super(firstName, middleName, lastName);
@@ -23,37 +24,46 @@ public class EmployeeSavings extends AddressBook {
     }
 
     public double getAccountValue() {
+        accountValue = calculateInterest()[11];
         return accountValue;
     }
 
     public double[] calculateInterest() {
-        double[] savings = generateMonthlySavings();
-        monthlyInterests = new double[12];
+        double[] savings = getMonthlySavings();
+        accumulatedValues = new double[12];
         double previousMonthInterest = 0;
         for(int i=0;i<12;i++) {
             double generatedInterest = (savings[i] + previousMonthInterest)*(1 + MONTHLY_INTEREST_RATE);
             previousMonthInterest = generatedInterest;
 
-            monthlyInterests[i] = generatedInterest;
+            accumulatedValues[i] = generatedInterest;
         }
-        return monthlyInterests;
+        return accumulatedValues;
     }
 
     public double[] generateMonthlySavings() {
         monthlySavings = new double[12];
         for (int i=0; i<12; i++) {
-            double randomSavings = 100;//(int)(Math.random() * 601) + 200;
+            double randomSavings = (int)(Math.random() * 701) + 100;
             monthlySavings[i] = randomSavings;
         }
         return monthlySavings;
     }
 
     public double[] getMonthlyInterests() {
+        accumulatedValues = calculateInterest();
+        monthlyInterests = new double[12];
+        double lastMonthSavings = 0;
+        for (int i=0;i<12;i++) {
+            monthlyInterests[i] = accumulatedValues[i] - monthlySavings[i] - lastMonthSavings;
+            lastMonthSavings += monthlySavings[i];
+        }
+
         return monthlyInterests;
     }
 
     public double[] getMonthlySavings() {
-        return monthlySavings;
+        return generateMonthlySavings();
     }
 
     public static String getReport(EmployeeSavings[] arr) {
