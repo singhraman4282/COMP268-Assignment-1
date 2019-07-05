@@ -34,9 +34,12 @@ public class EmployeeSavings extends AddressBook {
         double previousMonthInterest = 0;
         for(int i=0;i<12;i++) {
             double generatedInterest = (savings[i] + previousMonthInterest)*(1 + MONTHLY_INTEREST_RATE);
+            System.out.println("Saving is: " + savings[i]);
+            System.out.println("previous month interest: " + previousMonthInterest);
+            System.out.println("Total amount this month:" + generatedInterest);
             previousMonthInterest = generatedInterest;
-
             accumulatedValues[i] = generatedInterest;
+
         }
         return accumulatedValues;
     }
@@ -58,15 +61,37 @@ public class EmployeeSavings extends AddressBook {
             monthlyInterests[i] = accumulatedValues[i] - monthlySavings[i] - lastMonthSavings;
             lastMonthSavings += monthlySavings[i];
         }
-
         return monthlyInterests;
     }
 
     public double[] getMonthlySavings() {
+        if (monthlySavings != null)
+            return  monthlySavings;
         return generateMonthlySavings();
     }
 
     public static String getReport(EmployeeSavings[] arr) {
-        return "";
+        String report = "";
+
+        for(EmployeeSavings employeeSavings: arr) {
+            double[] savings = employeeSavings.getMonthlySavings();
+            double[] interests = employeeSavings.calculateInterest();
+            double[] interestOnly = employeeSavings.getMonthlyInterests();
+            for (int i=0;i<12;i++) {
+                report = report + savings[i] + "        " + interests[i] + "        " + interestOnly[i] + "\n";
+            }
+        }
+
+        return report;
     }
 }
+
+
+/*
+System.out.println("Total On Dice     Average Number of Rolls");
+        System.out.println("-------------     -----------------------");
+
+        for (int i = 2; i <= 12; i++ ) {
+            System.out.printf("%10d%22.4f\n", i, averageTriesForTotal(i));
+        }
+ */

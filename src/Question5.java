@@ -19,26 +19,35 @@ public class Question5 {
 
     public static void main(String[] args) {
 
-        System.out.println("Showing monthly savings");
+//        System.out.println("Showing monthly savings");
         EmployeeSavings employeeSavings = new EmployeeSavings("r","s");
-        double[] savings = employeeSavings.generateMonthlySavings();
-        for (double s : savings ) {
-            System.out.println(s);
-        }
+//        double[] savings = employeeSavings.generateMonthlySavings();
+//        for (double s : savings ) {
+//            System.out.println(s);
+//        }
+//
+//        System.out.println("Showing accumulated value");
+//        double[] interests = employeeSavings.calculateInterest();
+//        for (double i: interests) {
+//            System.out.println(i);
+//        }
+//
+//        System.out.println("Showing monthly interests");
+//        double[] interestOnly = employeeSavings.getMonthlyInterests();
+//        for (double i: interestOnly) {
+//            System.out.println(i);
+//        }
+//
+//        System.out.println("account value is: " + employeeSavings.getAccountValue());
 
-        System.out.println("Showing accumulated value");
-        double[] interests = employeeSavings.calculateInterest();
-        for (double i: interests) {
-            System.out.println(i);
-        }
 
-        System.out.println("Showing monthly interests");
-        double[] interestOnly = employeeSavings.getMonthlyInterests();
-        for (double i: interestOnly) {
-            System.out.println(i);
-        }
 
-        System.out.println("account value is: " + employeeSavings.getAccountValue());
+
+        EmployeeSavings[] es = new EmployeeSavings[] { employeeSavings };
+        String report = EmployeeSavings.getReport(es);
+        System.out.println(report);
+
+
     }
 
 
