@@ -24,6 +24,34 @@ will help Google to programmatically determine eligibility of the fifteen candid
 positions, and print the output on the console.
  */
 
+import java.util.ArrayList;
+
 public class Question8 {
 
+    public static void main(String[] args) {
+
+        Candidate[] candidates = new Candidate[] {
+                new Candidate("Elena", "Brandon", true, 82.30, 0.5, "poor"),
+                new Candidate("Thomas", "Molson", false, 85.10, 1.0, "poor"),
+                new Candidate("Hamilton", "Winn", false, 77.77, 0.8, "average"),
+                new Candidate("Suzie", "Sarandin", false, 69.93, 0.0, "average"),
+                new Candidate("Philip", "Winne", true, 93.03, 1.0, "average"),
+                new Candidate("Alex", "Trebok", true, 88.61, 0.7, "poor"),
+                new Candidate("Emma", "Pivoto", false, 55.99, 0.8, "excellent"),
+                new Candidate("John", "Lenthen", true, 87.49, 0.9, "excellent"),
+                new Candidate("James", "Lean", false, 88.00, 0.5, "excellent"),
+                new Candidate("Jane", "Ostin", true, 91.20, 0.6, "average"),
+                new Candidate("Emily", "Car", false, 66.79, 0.3, "excellent"),
+                new Candidate("Daniel", "Hamshire", true, 76.65, 0.2, "average"),
+                new Candidate("Neda", "Bazdar", true, 55.89, 0.5, "excellent"),
+                new Candidate("Aaron", "Smith", false, 90.01, 0.3, "excellent"),
+                new Candidate("Kate", "Hen", false, 87.9, 0.8, "poor") };
+
+        ArrayList<Candidate> eligible = Candidate.getEligibleCandidates(candidates);
+
+        for (Candidate c: eligible) {
+            System.out.println(c.getFirstName() + " " + c.getLastName() + ", innovation: " + c.isInnovative() + ", grade: " + c.getGrade() + ", regulation: " + c.getRegulation() + ", comunication: " + c.getCommunication());
+        }
+
+    }
 }

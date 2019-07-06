@@ -15,7 +15,24 @@ public class Candidate extends AddressBook {
         this.communication = comm;
     }
 
-    public static ArrayList<Candidate> getEligible
+    public static ArrayList<Candidate> getEligibleCandidates(Candidate[] cands) {
+        ArrayList<Candidate> candidates = new ArrayList<Candidate>();
+        for (Candidate cand : cands) {
+            if (cand.getGrade() >= 85) {
+                candidates.add(cand);
+            } else {
+                if (cand.getRegulation() >= 0.5) {
+                    if (cand.getCommunication() == "average" || cand.getCommunication() == "excellent") {
+                        candidates.add(cand);
+                    } else if (cand.isInnovative()) {
+                        candidates.add(cand);
+                    }
+                }
+            }
+
+        }
+        return candidates;
+    }
 
     public boolean isInnovative() {
         return innovation;
