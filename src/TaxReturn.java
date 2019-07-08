@@ -44,7 +44,7 @@ public class TaxReturn {
             case SINGLE:
                 return getSingleTax();
             case SINGLE_PARENT:
-                return getSingleTax() - (children * 5000);
+                return getSingleTax() - (children * CHILDREN_REDUCTION);
 
             case MARRIED:
                 return getMarriedTax();
@@ -61,12 +61,15 @@ public class TaxReturn {
         else if (income <= SINGLE_BRACKET2)
             return (RATE1 * SINGLE_BRACKET1)
                     + (RATE2 * (income - SINGLE_BRACKET1));
-        else if (income < SINGLE_BRACKET3)
+        else if (income <= SINGLE_BRACKET3)
             return (RATE1 * SINGLE_BRACKET1)
                     + (RATE2 * (SINGLE_BRACKET2 - SINGLE_BRACKET1))
                     + (RATE3 * (income - SINGLE_BRACKET2));
         else {
-            return (RATE1 * SINGLE_BRACKET1) + (RATE2 * (SINGLE_BRACKET2 - SINGLE_BRACKET1)) + (RATE3 * (SINGLE_BRACKET4 - SINGLE_BRACKET2)) + (RATE4 * (income - SINGLE_BRACKET4));
+            return (RATE1 * SINGLE_BRACKET1)
+                    + (RATE2 * (SINGLE_BRACKET2 - SINGLE_BRACKET1))
+                    + (RATE3 * (SINGLE_BRACKET4 - SINGLE_BRACKET2))
+                    + (RATE4 * (income - SINGLE_BRACKET4));
         }
     }
 
@@ -76,10 +79,16 @@ public class TaxReturn {
         else if (income <= MARRIED_BRACKET2)
             return RATE1 * MARRIED_BRACKET1
                     + RATE2 * (income - MARRIED_BRACKET1);
-        else
+        else if (income <= MARRIED_BRACKET3)
             return RATE1 * MARRIED_BRACKET1
                     + RATE2 * (MARRIED_BRACKET2 - MARRIED_BRACKET1)
                     + RATE3 * (income - MARRIED_BRACKET2);
+        else {
+            return RATE1 * MARRIED_BRACKET1
+                    + RATE2 * (MARRIED_BRACKET2 - MARRIED_BRACKET1)
+                    + RATE3 * (MARRIED_BRACKET4 - MARRIED_BRACKET2)
+                    + RATE5 * (income - MARRIED_BRACKET3);
+        }
     }
 
     private double getUnknownTax() {
@@ -90,7 +99,7 @@ public class TaxReturn {
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter your income: ");
         double income = in.nextDouble();
-        System.out.print("Enter S (single) or M (married): ");
+        System.out.print("Enter S (single) or M (married) or P (single parent) or any other alphabet for unknown: ");
         String input = in.next();
         int status = 0;
         int children = 0;
