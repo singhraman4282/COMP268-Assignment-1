@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d000b4dc-123b-4327-aeea-f78fecd5510d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Question9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Question10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TaxReturn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Question9.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="327">
+              <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#677#685#0" expanded="true" />
@@ -30,7 +30,28 @@
                 <element signature="e#1440#1441#0" expanded="true" />
                 <element signature="e#1588#1589#0" expanded="true" />
                 <element signature="e#1630#1631#0" expanded="true" />
-                <element signature="e#1615#1616#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Question10.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TaxReturn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="826">
+              <caret line="67" column="150" selection-start-line="67" selection-start-column="150" selection-end-line="67" selection-end-column="150" />
+              <folding>
+                <element signature="e#3018#3019#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,6 +93,8 @@
         <option value="$PROJECT_DIR$/src/Candidate.java" />
         <option value="$PROJECT_DIR$/src/Question8.java" />
         <option value="$PROJECT_DIR$/src/Question9.java" />
+        <option value="$PROJECT_DIR$/src/Question10.java" />
+        <option value="$PROJECT_DIR$/src/TaxReturn.java" />
       </list>
     </option>
   </component>
@@ -200,7 +223,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29807693" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.041208792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Question9.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="327">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#677#685#0" expanded="true" />
@@ -418,7 +441,24 @@
             <element signature="e#1440#1441#0" expanded="true" />
             <element signature="e#1588#1589#0" expanded="true" />
             <element signature="e#1630#1631#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Question10.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TaxReturn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="67" column="150" selection-start-line="67" selection-start-column="150" selection-end-line="67" selection-end-column="150" />
+          <folding>
+            <element signature="e#3018#3019#0" expanded="true" />
           </folding>
         </state>
       </provider>
