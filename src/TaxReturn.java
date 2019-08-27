@@ -26,13 +26,6 @@ public class TaxReturn {
     private int children;
 
 
-    /**
-     * Constructs a TaxReturn object for a given income and
-     * marital status, and computes the tax.
-     *
-     * @param anIncome the taxpayer income
-     * @param aStatus  either SINGLE or MARRIED
-     */
     public TaxReturn(double anIncome, int aStatus, int aChildren) {
         income = anIncome;
         status = aStatus;
@@ -95,7 +88,7 @@ public class TaxReturn {
         return RATE6 * income;
     }
 
-    public static void main(String[] args) {
+    public static void runFunction() {
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter your income: ");
         double income = in.nextDouble();

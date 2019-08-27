@@ -19,11 +19,11 @@ public class Question6 {
         exercise2();
     }
 
-    /*
-    I. Given the right triangles described below, write a program to compute the lengths of the
-remaining sides using a program.
-a. a = 48 and c = 80
-b. a = 84 and c = 91
+    /**
+     * I. Given the right triangles described below, write a program to compute the lengths of the remaining sides
+     * using a program.
+     * a. a = 48 and c = 80
+     * b. a = 84 and c = 91
      */
     private static void exercise1() {
         exercise1Part1();
@@ -41,7 +41,9 @@ b. a = 84 and c = 91
         Triangle t = new Triangle(a,c);
         b = t.getB();
 
+        System.out.println("Exercise 1 question a:");
         System.out.println(b);
+        System.out.println();
     }
 
     private static void exercise1Part2() {
@@ -55,14 +57,16 @@ b. a = 84 and c = 91
         Triangle t = new Triangle(a,c);
         b = t.getB();
 
+        System.out.println("Exercise 1 question b:");
         System.out.println(b);
+        System.out.println();
     }
 
-    /*
-    II. Determine if the following triangles are right-angled triangles:
-a. a = 45, b = 55, and c = 75
-b. a = 28, b = 45, and c = 53
-     */
+    /**
+     * II. Determine if the following triangles are right-angled triangles:
+     * a. a = 45, b = 55, and c = 75
+     * b. a = 28, b = 45, and c = 53
+     * */
     private static void exercise2() {
         exercise2Part1();
         exercise2Part2();
@@ -80,7 +84,9 @@ b. a = 28, b = 45, and c = 53
         Triangle t = new Triangle(a,b,c);
 
         boolean isRightAngled = t.irRightTriangle();
+        System.out.println("Exercise 2 question a:");
         System.out.println(isRightAngled);
+        System.out.println();
     }
 
     private static void exercise2Part2() {
@@ -95,7 +101,9 @@ b. a = 28, b = 45, and c = 53
         Triangle t = new Triangle(a,b,c);
 
         boolean isRightAngled = t.irRightTriangle();
+        System.out.println("Exercise 2 question b:");
         System.out.println(isRightAngled);
+        System.out.println();
     }
 
 

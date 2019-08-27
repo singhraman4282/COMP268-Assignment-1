@@ -11,9 +11,17 @@ public class BonusManager {
         double yearlySaving = quarter1.getSavings() + quarter2.getSavings() + quarter3.getSavings() + quarter4.getSavings();
         double minimumYearlySavings = monthlyCommitment * 12;
         double yearlyBonus = 0;
+
+        /**
+         *  annual bonus is 5% of annual savings if eligible
+         */
         if (yearlySaving > minimumYearlySavings) {
             yearlyBonus += yearlySaving * 0.05;
 
+            /**
+             * If the annual savings exceeds the committed amount by at least 25%, Space Inc. matches the
+             * additional savings (25% or above) as part of the annual bonus
+             */
             if (yearlySaving >= (minimumYearlySavings * 1.25)) {
                 yearlyBonus += ((yearlySaving - minimumYearlySavings) * 0.25);
             }

@@ -31,39 +31,25 @@ that number, followed by a line showing the number of steps taken to reach 1.
  */
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Question7 {
 
     public static void main(String[] args) {
-        ArrayList<Integer> sequence = getHailstoneSequence(15);
+        runFunction();
     }
 
-    public static ArrayList<Integer> getHailstoneSequence(int n) {
-        ArrayList<Integer> sequence = new ArrayList<Integer>();
+    private static void runFunction() {
+        System.out.println("Please input a number greater than 0");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
 
-        boolean success = false;
-        int nextNum = n;
-
-        do {
-            nextNum = nextNumberInSequence(nextNum);
-            success = (nextNum == 1);
-            sequence.add(nextNum);
-        } while (!success);
-
-        return sequence;
-    }
-
-    private static int nextNumberInSequence(int n) {
-        int nextNumber;
-
-        if ((n % 2) == 0) {
-            nextNumber = n / 2;
-            System.out.println(n + " is even, so I take half: " + nextNumber);
+        if (number > 0) {
+            ArrayList<Integer> sequence = HailstoneSequence.getHailstoneSequence(number);
         } else {
-            nextNumber = (n * 3) + 1;
-            System.out.println(n + " is odd, so I make 3n + 1: " + nextNumber);
+            runFunction();
         }
-
-        return nextNumber;
     }
+
+
 }

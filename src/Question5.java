@@ -15,12 +15,7 @@ Then, display the final account value for each of the 15 runners.
 
 public class Question5 {
 
-    private static double PRINCIPLE = 100;
-
     public static void main(String[] args) {
-
-        EmployeeSavings employeeSavings = new EmployeeSavings("r", "s");
-
 
         EmployeeSavings[] es = new EmployeeSavings[]{
                 new EmployeeSavings("Elena", "Brandon"),
@@ -41,7 +36,5 @@ public class Question5 {
 
         String report = EmployeeSavings.getReport(es);
         System.out.println(report);
-
-
     }
 }

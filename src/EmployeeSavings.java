@@ -34,9 +34,6 @@ public class EmployeeSavings extends AddressBook {
         double previousMonthInterest = 0;
         for(int i=0;i<12;i++) {
             double generatedInterest = (savings[i] + previousMonthInterest)*(1 + MONTHLY_INTEREST_RATE);
-            System.out.println("Saving is: " + savings[i]);
-            System.out.println("previous month interest: " + previousMonthInterest);
-            System.out.println("Total amount this month:" + generatedInterest);
             previousMonthInterest = generatedInterest;
             accumulatedValues[i] = generatedInterest;
 
@@ -73,28 +70,21 @@ public class EmployeeSavings extends AddressBook {
     public static String getReport(EmployeeSavings[] arr) {
         String report = "";
 
-        report = report + "Saving       Accumulated amount        Total Interest\n";
-        report = report + "=========================================================\n";
+
         for(EmployeeSavings employeeSavings: arr) {
             double[] savings = employeeSavings.getMonthlySavings();
             double[] interests = employeeSavings.calculateInterest();
             double[] interestOnly = employeeSavings.getMonthlyInterests();
+            report = report + employeeSavings.getFirstName() + " " + employeeSavings.getLastName() + "\n";
+            report = report + "Saving       Accumulated amount        Total Interest\n";
+            report = report + "=========================================================\n";
             for (int i=0;i<12;i++) {
                 report = report + savings[i] + "        " + interests[i] + "        " + interestOnly[i] + "\n";
             }
-            report = report + employeeSavings.getFirstName() + " " + employeeSavings.getLastName() + "\n";
+            report = report + "\n";
+
         }
 
         return report;
     }
 }
-
-
-/*
-System.out.println("Total On Dice     Average Number of Rolls");
-        System.out.println("-------------     -----------------------");
-
-        for (int i = 2; i <= 12; i++ ) {
-            System.out.printf("%10d%22.4f\n", i, averageTriesForTotal(i));
-        }
- */

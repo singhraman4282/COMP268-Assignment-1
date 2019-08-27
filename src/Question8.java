@@ -47,9 +47,12 @@ public class Question8 {
                 new Candidate("Aaron", "Smith", false, 90.01, 0.3, "excellent"),
                 new Candidate("Kate", "Hen", false, 87.9, 0.8, "poor") };
 
-        ArrayList<Candidate> eligible = Candidate.getEligibleCandidates(candidates);
+        ArrayList<Candidate> eligibleCandidates = Candidate.getEligibleCandidates(candidates);
 
-        for (Candidate c: eligible) {
+        System.out.println("Eligible Candidates:");
+        System.out.println("Total: " + eligibleCandidates.size());
+
+        for (Candidate c: eligibleCandidates) {
             System.out.println(c.getFirstName() + " " + c.getLastName() + ", innovation: " + c.isInnovative() + ", grade: " + c.getGrade() + ", regulation: " + c.getRegulation() + ", comunication: " + c.getCommunication());
         }
 

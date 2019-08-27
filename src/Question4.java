@@ -47,24 +47,36 @@ public class Question4 {
                 new BanffMarathonRunner("Aaron", "Smith", 317, 6),
                 new BanffMarathonRunner("Kate", "Hen", 265, 8) };
 
+        // Set a default home address for all runners
         for (int i=0; i<runners.length; i++) {
             runners[i].setHomeAddress("345 6 Ave SE 6th Floor, Calgary, AB T2G 4V1");
         }
 
+        // get fastest runner
+        System.out.println("Fastest Runner:");
         BanffMarathonRunner fastestRunner = BanffMarathonRunner.getFastestRunner(runners);
-        System.out.println(fastestRunner.getFirstName() + " " + fastestRunner.getLastName());
-        System.out.println(fastestRunner.getHomeAddress());
-        System.out.println(fastestRunner.getTime());
+        System.out.println("Name: " + fastestRunner.getFirstName() + " " + fastestRunner.getLastName());
+        System.out.println("Address: " + fastestRunner.getHomeAddress());
+        System.out.println("Time: "  + fastestRunner.getTime());
+        System.out.println();
 
+
+        // next fastest runner
+        System.out.println("Second Fastest Runner:");
         BanffMarathonRunner secondRunner = BanffMarathonRunner.getSecondFastestRunner(runners);
-        System.out.println(secondRunner.getFirstName() + " " + secondRunner.getLastName());
-        System.out.println(secondRunner.getHomeAddress());
-        System.out.println(secondRunner.getTime());
+        System.out.println("Name: " + secondRunner.getFirstName() + " " + secondRunner.getLastName());
+        System.out.println("Address: " + secondRunner.getHomeAddress());
+        System.out.println("Time: " + secondRunner.getTime());
         System.out.println("Time diffference: " + (secondRunner.getTime() - fastestRunner.getTime()));
+        System.out.println();
 
+        // average completion time for all runners
         double averageTime = BanffMarathonRunner.getAverageTime(runners);
         System.out.println("Average time: " + averageTime);
+        System.out.println();
 
+        // above average runners
+        System.out.println("Above average runners:");
         String aboveAveragePlayers = BanffMarathonRunner.getAboveAverageRunners(runners);
         System.out.println(aboveAveragePlayers);
     }

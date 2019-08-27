@@ -119,6 +119,7 @@ public class AddressBook {
         this.personalWebSite = personalWebSite;
     }
 
+    // compare
     public static void compare(String name1, String name2) {
 
 

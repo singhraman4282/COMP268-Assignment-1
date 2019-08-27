@@ -69,7 +69,7 @@ public class BanffMarathonRunner extends AddressBook {
         String details = "";
         for (int i=0; i<runners.length; i++) {
             if (runners[i].getTime() <= averageTime) {
-                String runnerDetails = runners[i].getFirstName() + " " + runners[i].getMiddleName() + " " + runners[i].getLastName() + ", " + runners[i].getYears();
+                String runnerDetails = runners[i].getFirstName() + " " + runners[i].getMiddleName() + " " + runners[i].getLastName() + ", " + runners[i].getYears() + " years";
                 if (details.length() == 0) {
                     details = runnerDetails;
                 } else {

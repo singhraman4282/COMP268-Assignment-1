@@ -10,7 +10,7 @@ below.
 public class Question3 {
 
     public static void main(String[] args) {
-        double answer = HypotenuseManager.calculateDistance(-4,4,-2,-3);
+        double answer = CartesianCoordinateSystem.calculateDistance(-4,4,-2,-3);
         System.out.println(answer);
     }
 

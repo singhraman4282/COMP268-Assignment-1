@@ -9,4 +9,8 @@ III. Unknown status – if the status doesn’t belong to SINGLE or MARRIED or S
 compute a 33% tax on the income.
  */
 public class Question10 {
+
+    public static void main(String[] args) {
+        TaxReturn.runFunction();
+    }
 }
