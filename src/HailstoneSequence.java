@@ -2,6 +2,11 @@ import java.util.ArrayList;
 
 public class HailstoneSequence {
 
+    /**
+     * returns hailstone sequence for a given int
+     * @param n int
+     * @return ArrayList<Integer>
+     */
     public static ArrayList<Integer> getHailstoneSequence(int n) {
         ArrayList<Integer> sequence = new ArrayList<Integer>();
 
@@ -17,6 +22,11 @@ public class HailstoneSequence {
         return sequence;
     }
 
+    /**
+     * generates next number in hailstone sequence based on given int
+     * @param n int
+     * @return int
+     */
     private static int nextNumberInSequence(int n) {
         int nextNumber;
 

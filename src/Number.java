@@ -2,6 +2,10 @@ import java.util.ArrayList;
 
 public class Number {
 
+    /**
+     * generates an arrayList
+     * @return ArrayList<String>
+     */
     public static ArrayList<String> iterate() {
         ArrayList<String> arrayList = new ArrayList<String>();
 
@@ -30,18 +34,38 @@ public class Number {
         return arrayList;
     }
 
+    /**
+     * returns whether the given int is divisible by 5
+     * @param n int
+     * @return boolean
+     */
     public static boolean isDivisibleBy5(int n) {
         return ((n != 0) && (n % 5 == 0));
     }
 
+    /**
+     * retunrs whether the given int is divisible by 7
+     * @param n int
+     * @return boolean
+     */
     public static boolean isDivisibleBy7(int n) {
         return ((n != 0) && (n % 7 == 0));
     }
 
+    /**
+     * returns whether the given int is odd
+     * @param n int
+     * @return boolean
+     */
     public static boolean isOdd(int n) {
         return (n % 2 != 0);
     }
 
+    /**
+     * returns whether the given int is a prime number
+     * @param n int
+     * @return boolean
+     */
     public static boolean isPrime(int n) {
         int divisors = 0;
         for (int i = 0; i < n; i++) {

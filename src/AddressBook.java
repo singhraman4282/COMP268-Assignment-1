@@ -11,6 +11,9 @@ public class AddressBook {
     private String facebookId;
     private String personalWebSite;
 
+    /**
+     * Initializes AddressBook
+     */
     public AddressBook(String firstName, String middleName, String lastName, String homeAddress, String businessPhone, String homePhone, String cellphone, String skypeId, String facebookId, String personalWebSite) {
         this.firstName = firstName;
         this.middleName = middleName;
@@ -24,102 +27,196 @@ public class AddressBook {
         this.personalWebSite = personalWebSite;
     }
 
+    /**
+     * Initializes AddressBook
+     */
     public AddressBook(String firstName, String middleName, String lastName) {
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
     }
 
+    /**
+     * Initializes AddressBook
+     */
     public AddressBook(String firstName, String middleName) {
         this.firstName = firstName;
         this.middleName = middleName;
     }
 
+    /**
+     * Initializes AddressBook
+     */
     public AddressBook(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     * returns first name
+     * @return String
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Sets first name
+     * @param firstName String
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     * returns middle name
+     * @return String
+     */
     public String getMiddleName() {
         return middleName;
     }
 
+    /**
+     * Sets middle name
+     * @param middleName String
+     */
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
+    /**
+     * returns last name
+     * @return String
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     * Sets last name
+     * @param lastName String
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     * returns home address
+     * @return String
+     */
     public String getHomeAddress() {
         return homeAddress;
     }
 
+    /**
+     * sets home address
+     * @param homeAddress
+     */
     public void setHomeAddress(String homeAddress) {
         this.homeAddress = homeAddress;
     }
 
+    /**
+     * returns business phone number
+     * @return String
+     */
     public String getBusinessPhone() {
         return businessPhone;
     }
 
+    /**
+     * sets business phone number
+     * @param businessPhone String
+     */
     public void setBusinessPhone(String businessPhone) {
         this.businessPhone = businessPhone;
     }
 
+    /**
+     * retunrs home phone number
+     * @return
+     */
     public String getHomePhone() {
         return homePhone;
     }
 
+    /**
+     * sets home phone number
+     * @param homePhone
+     */
     public void setHomePhone(String homePhone) {
         this.homePhone = homePhone;
     }
 
+
+    /**
+     * returns cell phone number
+     * @return String
+     */
     public String getCellphone() {
         return cellphone;
     }
 
+    /**
+     * sets cell phone number
+     * @param cellphone
+     */
     public void setCellphone(String cellphone) {
         this.cellphone = cellphone;
     }
 
+    /**
+     * returns skypeID
+     * @return String
+     */
     public String getSkypeId() {
         return skypeId;
     }
 
+    /**
+     * Sets skype id
+     * @param skypeId String
+     */
     public void setSkypeId(String skypeId) {
         this.skypeId = skypeId;
     }
 
+    /**
+     * returns facebookID
+     * @return String
+     */
     public String getFacebookId() {
         return facebookId;
     }
 
+    /**
+     * sets facebook ID
+     * @param facebookId String
+     */
     public void setFacebookId(String facebookId) {
         this.facebookId = facebookId;
     }
 
+    /**
+     * returns personal website
+     * @return String
+     */
     public String getPersonalWebSite() {
         return personalWebSite;
     }
 
+    /**
+     * sets personal website
+     * @param personalWebSite String
+     */
     public void setPersonalWebSite(String personalWebSite) {
         this.personalWebSite = personalWebSite;
     }
 
-    // compare
+    /**
+     * Compares two names
+     * @param name1 String
+     * @param name2 String
+     */
     public static void compare(String name1, String name2) {
 
 
@@ -149,6 +246,10 @@ public class AddressBook {
 
     }
 
+    /**
+     * checks if the phone number is correct (i.e. does not contain non-digits)
+     * @return boolean value
+     */
     public boolean phoneNumberIsCorrect() {
 
         for (int i=0; i<cellphone.length(); i++) {

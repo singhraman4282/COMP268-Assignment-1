@@ -25,13 +25,19 @@ public class TaxReturn {
     private int status;
     private int children;
 
-
+    /**
+     * Initializer
+     */
     public TaxReturn(double anIncome, int aStatus, int aChildren) {
         income = anIncome;
         status = aStatus;
         children = aChildren;
     }
 
+    /**
+     * retunrs tax amount based on status
+     * @return double
+     */
     public double getTax() {
         switch (status) {
             case SINGLE:
@@ -47,7 +53,10 @@ public class TaxReturn {
         }
     }
 
-
+    /**
+     * returns tax amount for single people
+     * @return double
+     */
     private double getSingleTax() {
         if (income <= SINGLE_BRACKET1)
             return (RATE1 * income);
@@ -66,6 +75,10 @@ public class TaxReturn {
         }
     }
 
+    /**
+     * returs tax amount for married people
+     * @return double
+     */
     private double getMarriedTax() {
         if (income <= MARRIED_BRACKET1)
             return RATE1 * income;
@@ -84,10 +97,17 @@ public class TaxReturn {
         }
     }
 
+    /**
+     * returns tax amount for people who selected unknown as their status
+     * @return double
+     */
     private double getUnknownTax() {
         return RATE6 * income;
     }
 
+    /**
+     * runs the tax algorithm
+     */
     public static void runFunction() {
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter your income: ");
